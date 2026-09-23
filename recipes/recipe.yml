@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: caelestia-ublue
+name: caelestia
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
@@ -44,8 +44,8 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - app.zen_browser.zen
           - com.discordapp.Discord
-          - com.spotify.Client
+          - com.github.libresprite.LibreSprite
+          - org.mozilla.firefox
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
